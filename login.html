@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <form action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="images/heart.jpg" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" id="email" name="email" required>
+  
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="password" name="password" required>
+  
+      <button type="button" onclick="submitForm()">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="containerr" id="vessel">
+      <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+      <div class="box"><b><p>New Here</p></b></div>
+      <a href="registration.html" style="text-decoration: none;"><button type="button" class="regbtn">Register</button></a> 
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+  <script>
+    function submitForm() {
+      var email = document.getElementById("email").value;
+      var pass = document.getElementById("password").value;
+      if (email === 'vijetnaik21@gmail.com' && pass === '12345678') {
+        alert("Logging you in");
+        window.location.assign("index.html");
+      } else {
+        alert("Invalid Credentials");
+      }
+    }
+  </script>
+</body>
+</html>
